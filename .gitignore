@@ -30,4 +30,7 @@
 *.out
 *.app
 
+# Other Stuff
+*.json
+
 /bin
