@@ -38,6 +38,7 @@ void Robot::robotInit() {
 }
 
 void Robot::autonInit() {
+  EventScheduler::getInstance()->initialize();
   // Initialize any commands to run throughout auton
   LoopPID* loopPID = new LoopPID();
   loopPID->run();
@@ -52,6 +53,7 @@ void Robot::autonPeriodic() {
 }
 
 void Robot::teleopInit() {
+  EventScheduler::getInstance()->initialize();
   // Initialize any commands to run throughout teleop
   LoopPID* loopPID = new LoopPID();
   loopPID->run();
@@ -63,6 +65,7 @@ void Robot::teleopPeriodic() {
 }
 
 void Robot::disabledInit() {
+  EventScheduler::getInstance()->initialize();
 }
 
 void Robot::disabledPeriodic() {
